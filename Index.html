@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Index</title>
+
+	<style>
+		body {
+			background-color: lightgreen;
+			color: white;
+		}
+	</style>
+<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+		crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+	<div class="container">
+		<div class="alert alert-success" role="alert">
+			<h1>Aula JS</h1>
+		</div>
+
+		<br />
+		<div id="conteudo">
+			<form>
+				<div class="form-group">
+					<label for="formGroupExampleInput">Nome</label>
+					<input type="text" class="form-control" id="txt1" placeholder="Informe seu nome">
+				</div>
+			</form>
+			<button id="btn" type="button" onclick="mostrar()" class="btn btn-success">Mostrar</button>
+
+			<div class="alert alert-primary mt-3" role="alert">
+				<span id="res"></span>
+			</div>
+		</div>
+		<br />
+	</div>
+	<div id="rodape">
+		Rodapé
+	</div>
+
+	<!-- Script -->
+	<script>
+		var btn = document.getElementById('btn');
+		function enter() {
+			btn.style.color = 'red'
+		}
+		function out() {
+			btn.style.color = 'blue'
+		}
+		var res = document.getElementById('res');
+		function enterRes() {
+			res.style.color = "purple"
+		}
+		//Criar uma função, ao clicar noo botão - fazer algo
+		function mostrar() {
+			//Pega o valor do id txt1
+			var nome = document.getElementById('txt1').value;
+
+			//selecionar o h2 do id res
+			//Resultado = texto digitado  no txt1
+			res.innerText = 'Seu nome é ' + nome;
+			btn.style.color = 'gray'
+		}
+	</script>
+
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+		crossorigin="anonymous"></script>
+
+</body>
+
+</html>
